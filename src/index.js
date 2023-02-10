@@ -5,12 +5,12 @@ import CurrencyExchange from './CurrencyExchange';
 
 // Business logic
 async function getConversion(amount, fromCurr, toCurr) {
-  const response = await CurrencyExchange.getConversion(amount, fromCurr, toCurr)
-    if(response.result === "success") {
-      printElements(response, amount, fromCurr, toCurr);
-    } else {
-      printError(response);
-    };
+  const response = await CurrencyExchange.getConversion(amount, fromCurr, toCurr);
+  if(response.result === "success") {
+    printElements(response, amount, fromCurr, toCurr);
+  } else {
+    printError(response);
+  }
 }
 
 // UI logic
@@ -30,9 +30,9 @@ function handleFormSubmission(event) {
   const amount = document.getElementById("conversion-amount").value;
   const fromCurr = document.getElementById("starting-unit").value;
   const toCurr = document.getElementById("converting-to").value;
-  console.log(amount)
-  console.log(fromCurr)
-  console.log(toCurr)
+  console.log(amount);
+  console.log(fromCurr);
+  console.log(toCurr);
   getConversion(amount, fromCurr, toCurr);
   // document.getElementById("converter-form").reset();
 }
