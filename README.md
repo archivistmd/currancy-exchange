@@ -1,46 +1,59 @@
-# _template repo_
+# _CURRENCY EXCHANGE_
 
-#### By _**Noah Atkinson**_
+#### By _**Mesha Devan**_
 
-#### _brief description_
+#### _An independent project done for Epicodus that allows the user to enter an amount of money from a specified currency of their choosing and convert it to another._
 
 https:// link
 
 ## Technologies Used
 
-* _HTML_
-* _CSS_
 * _Bootstrap_
+* _CSS_
+* _Git_
+* _HTML_
 * _JavaScript_
-* _webpack_
+* _Markdown_
+* _Babel_
+* _DotEnv_
 * _node.js_
 * _eslint_
 * _Jest_
-* _Babel_
+* _webpack_
+* _Currency Exchanger API_
 
 ## Description
 
-_INSERT DESCRIPTION_
+The webpage utilizes an API call in order to convert currency with over 160 supported currencies for the user to choose from by a drop-down list.
+
+The user enters the numerical value of the currency they're wishing to convert (ex. 30 USD) and when they click the convert button, it shows the amount in the new currency.
+
+To see the live page [click here](https://archivistmd.github.io/currency-exchange)
 
 ## Setup/Installation Requirements
 
-* _Install all packages with $ npm install._
-* _Build the project using webpack with $ npm run build_
-* _Start a development server with $ npm run start_
-* _Lint JS files in the src folder with $ npm run lint_
-* _Run tests with Jest using $ npm run test_ 
+**Please note this application requires an API key to function**
+
+* Clone this repository to your desktop.
+* Click here to navigate to [the currency exchange API](https://www.exchangerate-api.com/)
+* Locate the button at the top right corner that says _Get Free Key_.
+* Enter your email address & a password and click _Accept Terms & Create API Key_.
+* You will then be taken to a page titled "Dashboard" that displays your API key under a section called API Access. Copy this entire key as this will be the text you input in your .env file.
+
+* Navigate to the top level of this cloned directory in your computer's terminal.
+* Create a file named ".env" in the top level of this directory
+* In the text of the .env file, include API_KEY={your API key} where {your API key} is replaced with the actual numbers of your API key.
+* Install all packages with $ npm install.
+* Build the project using webpack with $ npm run start.
 
 
 ## Known Bugs
 
-* _There are no known bugs at this time_
-
-
-If you have any issues running this HTML site, then I have failed on a massive level. Please reach out to me at noahatkinson1.1@gmail.com or feel free to edit the code yourself if you feel so inclined.
+* Page resets without displaying results.
 
 ## MIT License
 
-Copyright (c) [2023] [Noah Atkinson]
+Copyright (c) [2023] [Mesh Devan]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
