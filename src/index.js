@@ -4,15 +4,13 @@ import './css/styles.css';
 import CurrencyExchange from './CurrencyExchange';
 
 // Business logic
-function getConversion(amount, fromCurr, toCurr) {
-  CurrencyExchange.getConversion(amount, fromCurr, toCurr)
-    .then(function(response) {
-      if(response.result) {
-        printElements(response, amount, fromCurr, toCurr);
-      } else {
-        printError(response);
-      }
-    });
+async function getConversion(amount, fromCurr, toCurr) {
+  const response = await CurrencyExchange.getConversion(amount, fromCurr, toCurr)
+    if(response.result === "success") {
+      printElements(response, amount, fromCurr, toCurr);
+    } else {
+      printError(response);
+    };
 }
 
 // UI logic

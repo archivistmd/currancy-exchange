@@ -1,8 +1,9 @@
 export default class CurrencyExchange {
 
-  static getConversion(amount, fromCurr, toCurr) {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${fromCurr}/${toCurr}/${amount}`)
-      .then(function(response) {
+  static async getConversion(amount, fromCurr, toCurr) {
+    try {
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${fromCurr}/${toCurr}/${amount}`)
+      const jsonResponse = await response.json();
         if (!response.ok) {
           console.log(response)
           const errorMessage = `${response.status}`;
@@ -10,9 +11,9 @@ export default class CurrencyExchange {
         } else {
           return response.json();
         }
-      })
-      .catch(function(error) {
+      }
+      catch(error) {
         return error;
-      });
+      };
   }
 }
