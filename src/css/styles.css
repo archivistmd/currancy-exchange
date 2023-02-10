@@ -1,3 +1,9 @@
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
 body {
-  background-color: lightblue;
+  background-color: tan;
+  text-align: center;
 }
