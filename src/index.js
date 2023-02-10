@@ -15,7 +15,7 @@ function displayConversion(response, amount, fromCurr, toCurr) {
 }
 
 function displayError(response) {
-  document.getElementById("display-result").innerText = `Apologies, there was an error in converting your currency: ${response.result}: ${response.errortype}`;
+  document.getElementById("display-result").innerText = `Apologies, there was an error in converting your currency: ${response}`;
 }
 
 function formSubmission(event) {
