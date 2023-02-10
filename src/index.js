@@ -4,7 +4,16 @@ import './css/styles.css';
 import CurrencyExchange from './CurrencyExchange';
 
 // Business logic
-
+function getConversion(amount, fromCurr, toCurr) {
+  CurrencyExchange.getConversion(amount, fromCurr, toCurr)
+    .then(function(response) {
+      if(response.result) {
+        displayConversion(response, amount, fromCurr, toCurr);
+      } else {
+        displayError(response);
+      }
+    })
+}
 
 // UI logic
 
@@ -24,7 +33,7 @@ function formSubmission(event) {
   const fromCurr = document.getElementById("starting-unit").value;
   const toCurr = document.getElementById("converting-to").value;
   getConversion(amount, fromCurr, toCurr);
-  document.getElementById("converter-form").reset();
+  // document.getElementById("converter-form").reset();
 }
 
 document.getElementById("converter-form").addEventListener("submit", formSubmission);
