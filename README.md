@@ -50,10 +50,12 @@ To see the live page [click here](https://archivistmd.github.io/currency-exchang
 ## Known Bugs
 
 * Page resets without displaying results.
+* Page doesn't seem to be calling on API consistently.
+* Page isn't displaying proper CSS styling at all times.
 
 ## MIT License
 
-Copyright (c) [2023] [Mesh Devan]
+Copyright (c) [2023] [Mesha Devan]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
